@@ -11,7 +11,15 @@ const mapStateToProps = (state) =>{
 
 const MainComponent = (props)=>{
     console.log(props);
-    return (<h1>Main Component</h1>);
+    return (
+        <div>
+            <ul>
+            {props.main.map( (object, i) =>{
+                    return <li  key={i}>{object} </li>;
+            })}
+            </ul>
+        </div>
+    );
 }
 
 export default withRouter (connect(mapStateToProps)(MainComponent));
