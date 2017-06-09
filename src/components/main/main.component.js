@@ -1,16 +1,14 @@
 import React from 'react';
-import store from '../../store/store';
 import {connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
 const mapStateToProps = (state) =>{
     return{
-        main: state
+        main: state.mainPage
     };
 }
 
 const MainComponent = (props)=>{
-    console.log(props);
     return (
         <div>
             <ul>
@@ -22,4 +20,6 @@ const MainComponent = (props)=>{
     );
 }
 
-export default withRouter (connect(mapStateToProps)(MainComponent));
+export default withRouter (
+    connect(mapStateToProps)(MainComponent)
+    );
