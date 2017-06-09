@@ -1,27 +1,43 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import BookPartial from './partials/books.partial';
 
 const mapStateToProps = (state) =>{
     return{
-        books: state.booksPage 
+        books: state.books.booksPage 
     };
 }
 
-const BooksComponent = (props)=>{
-    return (
-        <div className="container">
-        <div className="row">
-            {props.books.map( (book, i) =>{
-                    return( 
-                        <div className="col-lg-6 book" key={i}>
-                            <h4>Book author::  {book.author} </h4>
-                            <h4>Book title:: {book.title} </h4>
-                        </div>);
-            })}
+class  BooksComponent extends React.Component{
+
+    componentDidMount(){
+        this.props.dispatch( {
+            type: 'LOAD_BOOKS',
+            payload: 'idetert'
+        });
+
+    }
+
+    render() {
+        let books = this.props.books;
+        console.info("Books:", books)
+
+        if(books) var mappedBooks = 
+                    books.map( (book, index)=> {
+                    return <BookPartial  key= {index}  author={book.author} title={book.title} />
+                });
+
+        if (books){
+            return(
+            <div>
+                   {mappedBooks}
             </div>
-        </div>
-    );
+            );
+        }else{
+            return (<div>No Books!</div>);
+        }
+    }
 }
 
 export default withRouter (

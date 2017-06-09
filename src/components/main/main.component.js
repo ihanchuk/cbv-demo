@@ -11,11 +11,7 @@ const mapStateToProps = (state) =>{
 const MainComponent = (props)=>{
     return (
         <div>
-            <ul>
-            {props.main.map( (object, i) =>{
-                    return <li  key={i}>{object} </li>;
-            })}
-            </ul>
+          {props.main ? <h1>Data </h1> : <h1>Empty</h1>}
         </div>
     );
 }

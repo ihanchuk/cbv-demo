@@ -1,69 +1,30 @@
 import {createStore} from 'redux';
+import { combineReducers } from 'redux';
 
-const initialState = {
-  mainPage: [
-    "Scooter", 
-    "Sash", 
-    "Darude"
-    ],
-  bookPage:{
-    title: 'Life of Daniel Brown',
-    author: 'Jack daniels',
-    tags:[
-      "Drama"
-    ],
-    intro: "Short description"
-  },
-  booksPage:[
-    {
-      title:"First Book", 
-      author:'Jack daniels'
-    },
-    {
-      title:"First Book", 
-      author:'Jack daniels'
-    },
-    {
-      title:"First Book", 
-      author:'Jack daniels'
-    },
-    {
-      title:"First Book", 
-      author:'Jack daniels'
-    },
-    {
-      title:"First Book", 
-      author:'Jack daniels'
-    },
-    {
-      title:"First Book", 
-      author:'Jack daniels'
-    },
-    {
-      title:"First Book", 
-      author:'Jack daniels'
-    },
-    
-  ],
-  authorPage:{
-    author: 'Jack Daniels'
-  },
-  genrePage: [
-    {
-      genre: 'Horror story'
-    }
-  ]
-};
+import MainPageReducer from './reducers/main-page-reducer';
 
-function reducer(state=initialState, action){
+let reducers = combineReducers({
+  books:MainPageReducer
+});
+
+function reducer(state={}, action){
 switch (action.type){
-    case 'ADD_TRACK':
-      return [ ...state, action.payload.track];
+    case 'LOAD_BOOKS':
+      let newState = {};
+      newState["booksPage"] = [
+         {
+            title:"Pretty nice book", 
+            author:'Jack daniels'
+          },
+      ];
+      console.info("Up[dating state!!!!");
+      return newState;
     default:
       return state;
   }
 }
+console.log(reducers);
 
-const  store = createStore(reducer);
+ window.store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-export default store;
+export default window.store;
