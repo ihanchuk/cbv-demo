@@ -19,6 +19,31 @@ const initialState = {
       title:"First Book", 
       author:'Jack daniels'
     },
+    {
+      title:"First Book", 
+      author:'Jack daniels'
+    },
+    {
+      title:"First Book", 
+      author:'Jack daniels'
+    },
+    {
+      title:"First Book", 
+      author:'Jack daniels'
+    },
+    {
+      title:"First Book", 
+      author:'Jack daniels'
+    },
+    {
+      title:"First Book", 
+      author:'Jack daniels'
+    },
+    {
+      title:"First Book", 
+      author:'Jack daniels'
+    },
+    
   ],
   authorPage:{
     author: 'Jack Daniels'

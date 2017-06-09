@@ -6,9 +6,15 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
   background-color: $backGroundColor;
+  box-sizing: border-box;
 }
 
 h1{
   font: 100% $font-stack;
   border:none;
+}
+
+.book{
+  background: silver;
+  border-radius:10px;
 }

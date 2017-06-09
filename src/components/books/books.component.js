@@ -1,7 +1,27 @@
 import React from 'react';
+import {connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 
-const BooksComponent = (props)=>{
-    return (<h1>BookComponent</h1>);
+const mapStateToProps = (state) =>{
+    return{
+        books: state.booksPage
+    };
 }
 
-export default BooksComponent;
+const BooksComponent = (props)=>{
+    return (
+        <div className="row">
+            {props.books.map( (book, i) =>{
+                    return( 
+                        <div className="col-lg-6 book" key={i}>
+                            <h4>Book author::  {book.author} </h4>
+                            <h4>Book title:: {book.title} </h4>
+                        </div>);
+            })}
+            </div>
+    );
+}
+
+export default withRouter (
+    connect(mapStateToProps)(BooksComponent)
+    );
