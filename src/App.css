@@ -1,12 +1,23 @@
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
-  background-color: #f7faff;
-  box-sizing: border-box; }
+  background-color: #f7faff; }
 
 h1 {
   font: 100% Helvetica, sans-serif;
   border: none; }
+
+.daren {
+  background-color: black !important; }
+
+.bookTorn {
+  background: url("assets/1600.png") left top no-repeat;
+  font-family: 'Times New Roman', Times, serif;
+  min-height: 216px;
+  color: #f4c548 !important; }
+
+.bookTorn h1 {
+  font-style: italic; }
 
 .book {
   background: silver;

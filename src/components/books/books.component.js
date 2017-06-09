@@ -4,12 +4,13 @@ import { withRouter } from 'react-router-dom'
 
 const mapStateToProps = (state) =>{
     return{
-        books: state.booksPage
+        books: state.booksPage 
     };
 }
 
 const BooksComponent = (props)=>{
     return (
+        <div className="container">
         <div className="row">
             {props.books.map( (book, i) =>{
                     return( 
@@ -19,6 +20,7 @@ const BooksComponent = (props)=>{
                         </div>);
             })}
             </div>
+        </div>
     );
 }
 

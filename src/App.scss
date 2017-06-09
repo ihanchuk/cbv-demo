@@ -6,12 +6,25 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
   background-color: $backGroundColor;
-  box-sizing: border-box;
 }
 
 h1{
   font: 100% $font-stack;
   border:none;
+}
+
+.daren{
+  background-color: rgb(0,0,0) !important;
+}
+.bookTorn{
+  background: url('assets/1600.png') left top no-repeat;
+  font-family:'Times New Roman', Times, serif;
+  min-height: 216px;
+  color: #f4c548 !important;
+}
+
+.bookTorn h1{
+  font-style: italic;
 }
 
 .book{

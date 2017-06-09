@@ -14,3 +14,14 @@ ReactDOM.render(
 </Router>,
  document.getElementById('root'));
 registerServiceWorker();
+
+fetch('/authors')
+  .then(function(response) {
+    console.log(response.headers.get('Content-Type')); 
+    console.log(response.status); // 200
+    return response.json();
+   })
+  .then(function(authors) {
+    console.log(authors)
+  })
+  .catch( alert );
