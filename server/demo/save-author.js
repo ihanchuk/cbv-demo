@@ -21,6 +21,7 @@ newAuthor.save()
     .then( (authorId) =>{
         const newBook = new Book({
             author: authorId,
+            book_name: "FrontEnd Developer in Wonderland",
             meta: {
                 intro_text: "Some stupid intro",
                 isbn: "23dfg"    

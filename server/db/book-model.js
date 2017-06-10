@@ -5,7 +5,11 @@ var Book = new Schema({
     author: {
         type: Schema.Types.ObjectId,
         required: true,
-        ref:'Author'
+        ref: 'Author'
+    },
+    book_name: {
+            type: String,
+            required:true,
     },
     meta: {
         intro_text: {
