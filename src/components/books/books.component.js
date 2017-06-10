@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import {loadBooksByHTTP} from './actions/books-acions';
 import BookPartial from './partials/books.partial';
 
 const mapStateToProps = (state) =>{
@@ -9,14 +10,16 @@ const mapStateToProps = (state) =>{
     };
 }
 
+const mapDispatchToProps= (dispatch)=> ({
+    loadBooks: ()=>{
+        dispatch (loadBooksByHTTP());
+    }
+});
+
 class  BooksComponent extends React.PureComponent{
 
     componentDidMount(){
-        this.props.dispatch( {
-            type: 'LOAD_BOOKS',
-            payload: 'idetert'
-        });
-
+        this.props.loadBooks();
     }
 
     render() {
@@ -39,5 +42,5 @@ class  BooksComponent extends React.PureComponent{
 }
 
 export default withRouter (
-    connect(mapStateToProps)(BooksComponent)
+    connect(mapStateToProps, mapDispatchToProps)(BooksComponent)
     );
