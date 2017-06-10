@@ -9,7 +9,7 @@ const mapStateToProps = (state) =>{
     };
 }
 
-class  BooksComponent extends React.Component{
+class  BooksComponent extends React.PureComponent{
 
     componentDidMount(){
         this.props.dispatch( {

@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "node-sass-chokidar": "0.0.2",
@@ -14,8 +17,8 @@
     "redux": "^3.6.0"
   },
   "scripts": {
-   "build-css": "node-sass-chokidar src/ -o src/",
-   "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
