@@ -1,3 +1,5 @@
+/** Demo file for testing collection */
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -13,12 +15,16 @@ Book.find()
     .populate("author")
     .exec()
     .then( (data) =>{
-        log("\n Book::: \n \n",  data[0]);
+       data.forEach ( (book) =>{
+            console.log("\n\n\n", book);
+       });
     });
 
 Author.find()
     .populate("books")
     .exec()
     .then( (data) =>{
-        log("\n Author::: \n \n",  data[0]);
+        data.forEach ( (author) =>{
+            console.log("\n\n\n", author);
+       });
     });

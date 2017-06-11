@@ -6,6 +6,10 @@ import { BrowserRouter as Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from './store/store';
 
+import axios from 'axios';
+
+window.axios = axios;
+
 ReactDOM.render(
 <Router >
     <Provider store={store}>

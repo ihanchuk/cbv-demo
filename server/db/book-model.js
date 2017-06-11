@@ -7,19 +7,21 @@ var Book = new Schema({
         required: true,
         ref: 'Author'
     },
+    img:{
+        type: String,
+        required:true,
+    },
     book_name: {
             type: String,
             required:true,
     },
-    meta: {
-        intro_text: {
+     intro_text: {
             type: String,
             required:true,
-        },
-        isbn: {
-            type: String,
-            required:true,
-        }
+    },
+    isbn: {
+           type: String,
+           required:true,
     }
 });
 const BookModel = mongoose.model('Book', Book);

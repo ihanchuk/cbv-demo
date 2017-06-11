@@ -1,3 +1,5 @@
+/** Demo file for testing collection */
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -21,11 +23,10 @@ newAuthor.save()
     .then( (authorId) =>{
         const newBook = new Book({
             author: authorId,
+            img: 'http://',
+            intro_text: 'intro',
+            isbn: 'f234234',
             book_name: "FrontEnd Developer in Wonderland",
-            meta: {
-                intro_text: "Some stupid intro",
-                isbn: "23dfg"    
-            }
         });
         newBook.save().then( (data) => {
             console.log("book saved");

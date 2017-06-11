@@ -22,7 +22,10 @@ app.get('/', (req, res) => {
 
 app.get("/authors", function(req,resp){
     resp.json({
-        author: 'Me and My'
+        author: 'Jack Daniels',
+        books: [
+          {id:"234234", name:"Book name"}
+        ]
     });
 });
 
