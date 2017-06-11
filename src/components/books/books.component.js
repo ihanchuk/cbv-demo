@@ -26,8 +26,14 @@ class  BooksComponent extends React.PureComponent{
         var books = this.props.books;
         var mappedBooks = 
                     books.map( (book, index)=> {
-                    return <BookPartial  key= {index}  author={book.author} title={book.title} />
-                });
+                    return( 
+                    <BookPartial  
+                        key= {index} 
+                        author={book.author} 
+                        bookimg = {book.img}
+                        title={book.intro_text}
+                    />)
+                }); 
 
         if (books){
             return(

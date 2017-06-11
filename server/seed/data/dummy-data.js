@@ -18,6 +18,7 @@ const authors = [
                 intro_text: 'FBI special agent Mercy Kilpatrick has been waiting her whole life for disaster to strike. A prepper since childhood, Mercy grew up living off the land—and off the grid—in rural Eagle’s Nest, Oregon. Until a shocking tragedy tore her family apart and forced her to leave home. Now a predator known as the cave man is targeting the survivalists in her hometown, murdering them in their homes, stealing huge numbers of weapons, and creating federal suspicion of a possible domestic terrorism event. But the crime scene details are eerily familiar to an unsolved mystery from Mercy’s past.'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/81uuGF6YePL._UX250_.jpg',
         meta: {first_name: 'Kendra', last_name: 'Elliot'} 
     },
     {
@@ -37,6 +38,7 @@ const authors = [
                 intro_text: 'For the first time, J.K. Rowlings beloved Harry Potter books will be presented in lavishly illustrated full-color editions. Kate Greenaway-award-winning artist Jim Kay has created over 100 stunning illustrations, making this deluxe format a perfect gift as much for a child being introduced to the series, as for the dedicated fan.'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/31zc-85LuML._UX250_.jpg',
         meta:{first_name: 'J.K', last_name: 'Rowling'}
     },
     {
@@ -56,6 +58,7 @@ const authors = [
                 intro_text: 'We expect our judges to be honest and wise. Their integrity and impartiality are the bedrock of the entire judicial system. We trust them to ensure fair trials, to protect the rights of all litigants, to punish those who do wrong, and to oversee the orderly and efficient flow of justice.'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/71JrhQGPrOL._UX250_.jpg',
         meta:{first_name: 'John', last_name: 'Grisham'}
     },
     {
@@ -75,6 +78,7 @@ const authors = [
                 intro_text: ' '
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/618WCP0vm9L._UX250_.jpg',
         meta:{first_name: 'James', last_name: 'Peterson'}
     },
     {
@@ -94,6 +98,7 @@ const authors = [
                 intro_text: 'Oryx and Crake is at once an unforgettable love story and a compelling vision of the future. Snowman, known as Jimmy before mankind was overwhelmed by a plague, is struggling to survive in a world where he may be the last human, and mourning the loss of his best friend, Crake, and the beautiful and elusive Oryx whom they both loved. In search of answers, Snowman embarks on a journey–with the help of the green-eyed Children of Crake–through the lush wilderness that was so recently a great city, until powerful corporations took mankind on an uncontrolled genetic engineering ride. Margaret Atwood projects us into a near future that is both all too familiar and beyond our imagini'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/210tWocDdhL._UX250_.jpg',
         meta:{first_name: 'Margaret', last_name: 'Atwood'}
     },
     {
@@ -113,6 +118,7 @@ const authors = [
                 intro_text: 'Gliding over the treacherous Green in a shaky aircraft that she has no idea how to land, Violet Bates is still in shock. The harrowing events of the previous night play over in her mind as she asks herself question after question.'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/91DD7QfG4gL._UX250_.jpg',
         meta:{first_name: 'Bella', last_name: 'Forrest'}
     },
     {
@@ -132,6 +138,7 @@ const authors = [
                 intro_text: 'An impressive work of mythic magnitude that may turn out to be Stephen King’s greatest literary achievement'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/61dWUcBJ10L._UX250_.jpg',
         meta:{first_name: 'Stephen', last_name: 'King'}
     },
     {
@@ -151,6 +158,7 @@ const authors = [
                 intro_text: 'The unforgettable characters from Ink and Bone and Paper and Fire unite to save the Great Library of Alexandria from itself in this electrifying adventure in the New York Times bestselling series.'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/718LDlAzqqL._UX250_.jpg',
         meta:{first_name: 'Raichel', last_name: 'Caine'}
     },
     {
@@ -170,6 +178,7 @@ const authors = [
                 intro_text: 'The final Guardians Trilogy novel from the #1 New York Times bestselling author of Bay of Sighs and Stars of Fortune.'
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/71kqGdN0j8L._UX250_.jpg',
         meta:{first_name: 'Nora', last_name: 'Roberts'}
     },
     {
@@ -189,6 +198,7 @@ const authors = [
                 intro_text: 'Forced into retirement by an unexpected injury, Philadelphia homicide detective Jack O’Malley is mourning the loss of his career when his uncle abruptly dies, leaving Jack to dispose of his crumbling '
             }
         ],
+        img: 'https://images-na.ssl-images-amazon.com/images/I/B1QX-mbVLLS._UX250_.jpg',
         meta:{first_name: 'Melinda', last_name: 'Leigh'}
     },
 ];

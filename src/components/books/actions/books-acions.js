@@ -1,5 +1,15 @@
+import axios from 'axios';
+
 export const loadBooksByHTTP =  () => dispatch =>{
-    setTimeout( ()=>{
-        dispatch({ type: 'LOAD_BOOKS', payload: []});
-    }, 1000 );
+    axios.get('http://localhost:9000/books')
+        .then(function (response) {
+        let books = response.data;
+        dispatch({
+            type: 'LOAD_BOOKS',
+            payload: books
+        });
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
 }

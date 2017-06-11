@@ -6,6 +6,10 @@ var Author = new Schema({
             type: Schema.Types.ObjectId,
             ref: 'Book'
         }],
+        img: {
+                 type: String,
+                 required:true   
+        },
         meta: {
             first_name: {
                 type: String,
@@ -14,9 +18,13 @@ var Author = new Schema({
             last_name: {
                 type: String,
                 required:true,
+             },
         }
-    }
 });
+
+Author.virtual('idk').get( ()=> {
+     return this._id; 
+    });
 
 const AuthorModel = mongoose.model('Author', Author);
 module.exports = AuthorModel;

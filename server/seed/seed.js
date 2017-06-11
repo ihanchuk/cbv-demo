@@ -9,7 +9,8 @@ const Book = require('../db/book-model');
 
 authors.forEach( (author) => {
     let newAuthor = new Author({
-        meta: author. meta
+        meta: author. meta,
+        img: author.img
     });
 
     newAuthor.save()
@@ -42,7 +43,7 @@ authors.forEach( (author) => {
                             if (err) {
                                 console.log(err);
                             }
-                            console.log(`Seeded author:: ${author.meta.last_name} with book ${res.book_name}`);
+                            console.log(`Seeded author:: ${author.meta.last_name} with book:: ${res.book_name}`);
                         });
                     }
                 });
