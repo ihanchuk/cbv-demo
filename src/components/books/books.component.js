@@ -31,6 +31,7 @@ class  BooksComponent extends React.PureComponent{
                         key= {index} 
                         author={book.author} 
                         bookimg = {book.img}
+                        bookid={book._id}
                         title={book.intro_text}
                     />)
                 }); 

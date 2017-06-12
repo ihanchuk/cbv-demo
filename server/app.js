@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 
 app.get("/authors", function(req,resp){
     Author.find()
-    .populate("books")
+    .select('img meta')
     .exec()
     .then( (data) =>{
         resp.json(data);

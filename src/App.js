@@ -9,6 +9,7 @@ import BookComponent  from './components/book/book.component';
 import MainComponent  from './components/main/main.component';
 import GenreComponent from './components/genre/genre.component';
 import AuthorComponent from './components/author/author.component';
+import AuthorsComponent from './components/authors/authors-component';
  
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
                 <ul className=" nav nav-pills">
                     <li role="presentation"><Link to="/">Main Page</Link></li>
                     <li role="presentation"><Link to="/books"> Books </Link></li>
+                    <li role="presentation"><Link to="/authors"> Authors </Link></li>
                 </ul>
               </div>
             </nav>
@@ -33,6 +35,8 @@ class App extends Component {
                   <Route exact  path="/" component={MainComponent}/>
                   <Route path="/books" component={BooksComponent}/>
                   <Route path="/book/:id" component={BookComponent}/>
+                  <Route path="/authors" component={AuthorsComponent}/>
+                  <Route path="/author/:id" component={AuthorComponent}/>
               </Switch>
      </div>
     );
